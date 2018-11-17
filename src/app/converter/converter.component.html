@@ -15,8 +15,7 @@
         <form #currency="ngForm" (submit)="covert()">
           <div class="form-group">
             <select class="form-control">
-              <option value="USD">USD</option>
-              <option value="PKR">PKR</option>
+              <option *ngFor="let name of currencyName;index as i" [value]="currencySymbols[i]">{{name}}({{currencySymbols[i]}})</option>
             </select>
           </div>
           <div class="form-group" [class.has-error]="amount.invalid && amount.touched">
@@ -26,8 +25,7 @@
           
           <div class="form-group">
               <select class="form-control">
-                <option value="USD">USD</option>
-                <option value="PKR">PKR</option>
+                <option *ngFor="let name of currencyName;index as i" [value]="currencySymbols[i]">{{name}}({{currencySymbols[i]}})</option>
               </select>
           </div>
         </form>

@@ -1,4 +1,4 @@
-export class a {
+export class DummyData {
     public static currency: object = {
         "success": true,
         "symbols": {
