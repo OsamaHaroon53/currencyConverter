@@ -1,0 +1,16 @@
+.logo{
+    padding: 0 !important;
+}
+.navbar-default {
+    background-color: white !important;
+    border-color: white !important;
+}
+.logo_txt{
+    top: 10px;
+}
+.navbar-collapse {
+    margin: 21px 0px;
+}
+.container{
+    background-color: white
+}

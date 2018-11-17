@@ -1,0 +1,12 @@
+.main{
+    background-color: rgb(255, 238, 0);
+}
+p{
+    text-align: justify;
+}
+.form-class{
+    background-color: white;
+}
+.d-none{
+    display:none;
+}
