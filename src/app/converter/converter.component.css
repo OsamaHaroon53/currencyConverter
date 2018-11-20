@@ -1,5 +1,6 @@
 .main{
-    background-color: rgb(255, 238, 0);
+    background-color: #fece00;
+    padding: 25px 90px;
 }
 p{
     text-align: justify;
@@ -9,4 +10,21 @@ p{
 }
 .d-none{
     display:none;
+}
+.btn{
+    color: #202221;
+    border-color: #00e6d4;
+    background-color: #00e6d4;
+}
+.btn[type="submit"]{
+    width: 100%;
+}
+.first{
+    margin-top: 15px;
+}
+button{
+    font-size: 18px;
+}
+.col-md-7 button{
+    font-size: 20px;
 }
