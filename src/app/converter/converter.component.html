@@ -1,45 +1,55 @@
 <!-- <div class="container main"> -->
-  <div class="row main">
-    <!-- Left section -->
-    <div class="col-md-7 col-lg-7">
-      <h1>Currency Converter</h1>
-      <h3>Need to convert Currency with latest rate?</h3>
-      <p>We’re specialists in making currency transfers for customers just like you.
-        <br>
-        <br> We can help by delevering latest and great exchange rates. Award-winning customer service. Easy-to-use online coverter.
-        And because we gave exchange rates every single minute for thousands of customers, we do it well.</p><br><br>
-      <div class="form-group">
-        <button class="btn">How does it work</button>
-      </div>
-    </div>
-    <!-- right section -->
-    <div class="col-md-5 col-lg-5">
-      <p>Select the currency you have and enter the amount you have. Then select the currency you would like and click ‘Convert’.</p>
-      <div class="form-class col-md-12">
-        <form #currency="ngForm" (submit)="convert(currency.form.value)">
-
-          <div class="form-group first">
-            <select class="form-control" ngModel name="from">
-              <option *ngFor="let name of currencyName;index as i" [ngValue]="currencySymbols[i]">{{name}}({{currencySymbols[i]}})</option>
-            </select>
-          </div>
-
-          <div class="form-group" [class.has-error]="amount.invalid && amount.touched">
-            <input type="number" name="amount" class="form-control" placeholder="Amount" #amount ngModel required>
-          </div>
-
-          <div class="form-group">
-            <select class="form-control" name="to" ngModel>
-              <option *ngFor="let name of currencyName;index as i" [value]="currencySymbols[i]">{{name}}({{currencySymbols[i]}})</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <button [disabled]="!currency.form.valid" type="submit" class="btn">Convert</button>
-          </div>
-        </form>
-      </div>
-
+<div class="row main">
+  <!-- Left section -->
+  <div class="col-md-7 col-lg-7">
+    <h1>Currency Converter</h1>
+    <h3>Need to convert Currency with latest rate?</h3>
+    <p>We’re specialists in making currency transfers for customers just like you.
+      <br>
+      <br> We can help by delevering latest and great exchange rates. Award-winning customer service. Easy-to-use online coverter.
+      And because we gave exchange rates every single minute for thousands of customers, we do it well.</p>
+    <br>
+    <br>
+    <div class="form-group">
+      <button class="btn">How does it work</button>
     </div>
   </div>
+  <!-- right section -->
+  <div class="col-md-5 col-lg-5">
+    <p>Select the currency you have and enter the amount you have. Then select the currency you would like and click ‘Convert’.</p>
+    <div class="form-class">
+      <form #currency="ngForm" (submit)="convert(currency.form.value)">
+
+        <div class="form-group first">
+          <select class="form-control" ngModel #from name="from">
+            <option *ngFor="let name of currencyName;index as i" [value]="currencySymbols[i]">{{name}}({{currencySymbols[i]}})</option>
+          </select>
+        </div>
+
+        <div class="form-group" [class.has-error]="amount.invalid && amount.touched">
+          <input type="number" name="amount" class="form-control" placeholder="Amount" ngModel required>
+        </div>
+
+        <div class="form-group">
+          <select class="form-control" name="to" ngModel>
+            <option *ngFor="let name of currencyName;index as i" [value]="currencySymbols[i]">{{name}}({{currencySymbols[i]}})</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <button [disabled]="!currency.form.valid" type="submit" class="btn">Convert</button>
+        </div>
+
+      </form>
+
+    </div>
+    <div class="result-class" *ngIf="result">
+      <h3>
+        <span class="label label-default">Result:</span>
+        <h5> {{convertCurrency['query']['amount']}} {{convertCurrency['query']['from']}} =</h5>
+      </h3>
+      <h3 align="center">{{convertCurrency['result']}} {{convertCurrency['query']['to']}}</h3>
+    </div>
+  </div>
+</div>
 <!-- </div> -->

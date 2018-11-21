@@ -6,7 +6,8 @@ p{
     text-align: justify;
 }
 .form-class{
-    background-color: white;
+    background-color: rgb(245, 241, 241);
+    padding: 15px;
 }
 .d-none{
     display:none;
@@ -27,4 +28,13 @@ button{
 }
 .col-md-7 button{
     font-size: 20px;
+}
+.result-class{
+    padding: 15px;
+    /* box-shadow: 2px 2px 25px 0px #888888; */
+    background-color: white;
+}
+h5{
+    display: inline-block;
+    padding-left: 10px;
 }

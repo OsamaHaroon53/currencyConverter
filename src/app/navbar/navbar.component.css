@@ -6,8 +6,8 @@
     border-color: white !important;
 }
 .logo_txt{
-    top: 1px;
-    font-size: 20px;
+    top: 4px;
+    font-size: 18px;
     left:5px;
 }
 .navbar-collapse {
@@ -18,16 +18,27 @@
 }
 .navbtn{
     top:-10px;
-}
-.btn{
     color: #202221;
     border-color: #00e6d4;
     background-color: #00e6d4;
+    margin-top:4px;
 }
 li{
-    margin:0px 4px;
+    margin-right: 4px;
 }
 li>a{
     padding-top: 5px;
     padding-bottom: 5px;
+    color: #202221;
+}
+li.dropdown>button{
+    background-color: white;
+}
+li a:hover, li>button:hover,li.open>button{
+    color: #202221;
+    border-color: #00e6d4;
+    background: #00e6d4;
+}
+.contact{
+    margin-bottom: 4px;
 }

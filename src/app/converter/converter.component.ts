@@ -11,13 +11,21 @@ export class ConverterComponent implements OnInit {
 
   currencyName: Array<string> = [];
   currencySymbols: Array<string> = [];
-
+  convertCurrency: object;
+  result: boolean=false;
   constructor(private http: HttpService) { }
 
   convert(currency) {
     this.http.getData("convert", "&from=" + currency.from + "&to=" + currency.to + "&amount=" + currency.amount);
-    // this.getData("convert","&from="+this.currency.from+"&to="+this.currency.to+"&amount="+this.currency.amount).subscribe(data => {
-    //   console.log(data);
+    this.convertCurrency = DummyData.convert;
+    this.result=true;
+    // this.http.getData("convert","&from="+currency.from+"&to="+currency.to+"&amount="+currency.amount).subscribe(data => {
+    //   if(data['success']){
+    //     this.convertCurrency=data;
+    //   }
+    //   else{
+    //        //for error handling
+    //     }
     // });
   }
 
